@@ -37,7 +37,7 @@ public class LoginController {
         return result;
     }
 
-    @RequestMapping(value="/logOff",method = RequestMethod.POST)
+    @RequestMapping(value="/signOff",method = RequestMethod.POST)
     public void logOff(HttpSession session) {
         session.invalidate();
     }
