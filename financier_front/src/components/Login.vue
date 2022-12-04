@@ -9,7 +9,7 @@
                 size="large" clearable />
         </div>
         <div class="picture-part">
-            <el-input class="picture-input" v-model="picture_num" placeholder="图形验证码" :prefix-icon="Key" size="large" />
+            <el-input class="picture-input" v-model="picture_num" placeholder="图形验证码" :prefix-icon="Key" size="large" @focus="checkTime" />
             <a class="picture-refresh" @click="getImage"><img class="picture" :src="imgData" /></a>
         </div>
         <div class="button-part">
@@ -40,6 +40,7 @@ let password = ref('');
 let picture_num = ref('');
 
 let imgData = ref('');
+let timeRecord = ref(0);
 //等待优化
 get_capthca()
 
@@ -57,10 +58,17 @@ async function get_capthca() {
     });
 }
 function getValue(one: any) {
+    timeRecord.value = Date.parse(new Date().toString());
     imgData.value = 'data:image/png;base64,' + one.data.captcha;
 } 
 function getImage() {
     get_capthca();
+}
+function checkTime() {
+    let nowTime = Date.parse(new Date().toString());
+    if(nowTime - timeRecord.value >= 60000){
+        get_capthca();
+    }
 }
 </script>
 

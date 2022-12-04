@@ -17,7 +17,7 @@
                 <div class="right-nav">
                     <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
                         <el-tab-pane label="登录" name="first">
-                            <Login class="login" />
+                            <Login/>
                         </el-tab-pane>
                         <el-tab-pane label="注册" name="second">Config</el-tab-pane>
                     </el-tabs>

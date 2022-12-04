@@ -8,8 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
 @CrossOrigin
 @RestController
+/**
+ * @author proteincode
+ */
 public class VerificationController {
 
     @Autowired
@@ -19,5 +24,6 @@ public class VerificationController {
     public JSONObject getCaptcha() {
        return verificationService.applyCaptcha();
     }
+
 
 }

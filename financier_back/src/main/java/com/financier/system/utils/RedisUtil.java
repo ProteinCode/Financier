@@ -8,6 +8,7 @@ import java.time.Duration;
 
 /**
  * redis工具类.
+ * @author proteincode
  */
 @Component
 public class RedisUtil {
@@ -42,13 +43,18 @@ public class RedisUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //设置过期时间，Duration Class的ofMillis(long)方法用于获取1毫秒格式的持续时间。
+        //设置过期时间，这里设置为 1 秒
         Duration duration = Duration.ofMinutes(EXPIRE_TIME);
         //设置定时删除
         redisTemplate.expire(key,duration);
         return result;
     }
 
+    /**
+     * 删除缓存数据
+     * @param key
+     * @return
+     */
     public boolean delete(final String key) {
         boolean result = false;
         try {

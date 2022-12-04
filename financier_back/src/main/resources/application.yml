@@ -1,0 +1,28 @@
+# service configuration
+server:
+    port: 8088
+# verification part configuration
+verification-code:
+    width: 110
+    height: 36
+#Redis Configuration
+spring:
+    data:
+        redis:
+            host: 127.0.0.1
+            port: 6379
+            database: 0
+            jedis:
+                pool:
+                    max-active: 50
+                    max-wait: 3000
+                    max-idle: 20
+                    min-idle: 2
+                timeout: 5000
+# Swagger3.0 configuration
+#swagger:
+#    enable: true
+#    application-name: ${spring.application.name}
+#    application-version: 1.0
+#    application-description: springfox swagger 3.0??Demo
+#    try-host: http://localhost:${server.port}
