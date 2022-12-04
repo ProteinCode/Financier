@@ -1,29 +1,12 @@
 <template>
-  <div id="app" style="height: 100%;">
-    <router-view></router-view>
-  </div>
+  <RouterView />
 </template>
 
-<script>
-export default {
-  name: 'app'
-}
+<script lang="ts">
+import {
+    RouterView
+} from 'vue-router'
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  //margin-top: 60px;
-}
-body {
-  margin: 0;
-}
-#app{
-  height: 100%;
-}
+<style scoped>
 </style>
-

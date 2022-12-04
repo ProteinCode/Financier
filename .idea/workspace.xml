@@ -69,7 +69,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -109,6 +109,7 @@
       <workItem from="1665285272684" duration="604000" />
       <workItem from="1665474654089" duration="2795000" />
       <workItem from="1665540947399" duration="3946000" />
+      <workItem from="1669343653354" duration="333000" />
     </task>
     <servers />
   </component>
